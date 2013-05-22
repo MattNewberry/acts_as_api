@@ -75,7 +75,7 @@ module ActsAsApi
       elsif fieldset_options[:if]
         condition_fulfilled?(model, fieldset_options[:if], options)
       else
-        true
+        model.has_attribute?(field)
       end
     end
 
